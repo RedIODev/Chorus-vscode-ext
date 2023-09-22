@@ -1,0 +1,25 @@
+{
+  "name": "chorus",
+  "displayName": "Chorus",
+  "description": "Chorus language support for VSCode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "chorus",
+      "aliases": ["Chorus", "chorus"],
+      "extensions": [".ch"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "chorus",
+      "scopeName": "source.chorus",
+      "path": "./syntaxes/chorus.tmLanguage.json"
+    }]
+  }
+}

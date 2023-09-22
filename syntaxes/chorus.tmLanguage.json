@@ -1,0 +1,86 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Chorus",
+	"patterns": [
+		{
+			"include": "#control-keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#visibility-keywords"
+		},
+		{
+			"include": "#line-comment"
+		},
+		{
+			"include": "#mutability-keywords"
+		},
+		{
+			"include": "#alloc-keyword"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.chorus",
+					"match": "\\b(namespace|struct|var|unsafe|extern|inline|interface|type|fn|enum|union|static|staged|unsigned|where|satisfies|is|not|implement|ref|Self)\\b"
+				}
+			]
+		},
+		"visibility-keywords": {
+			"patterns": [
+				{
+					"name": "keyword.visibility.chorus",
+					"match": "\\b(public|local)\\b"
+				}
+			]
+		},
+		"control-keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.chorus",
+					"match": "\\b(import|export|as|break|continue|if|else|switch|for|while|return|yield|in|with|default)\\b"
+				}
+			]
+		},
+		"mutability-keywords": {
+			"patterns": [
+				{
+					"name": "keyword.mutability.chorus",
+					"match": "\\b(const|mut)\\b"
+				}
+			]
+		},
+		"alloc-keyword": {
+			"patterns": [
+				{
+					"name": "keyword.operator.new.chorus",
+					"match": "\\b(alloc)\\b"
+				}
+			]
+		},
+		"line-comment": {
+			"name": "comment.line.chorus",
+			"begin": "//",
+			"end": "\n"
+		},
+		"strings": {
+			"name": "string.quoted.double.chorus",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.chorus",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.chorus"
+}
